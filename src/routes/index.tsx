@@ -1,14 +1,18 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from "@tanstack/react-router";
+import { Box, Center, Heading } from "lism-css/react";
 
-export const Route = createFileRoute('/')({ component: Home })
+export const Route = createFileRoute("/")({ component: Home });
 
 function Home() {
   return (
-    <div className="p-8">
-      <h1 className="text-4xl font-bold">Welcome to TanStack Start</h1>
-      <p className="mt-4 text-lg">
-        Edit <code>src/routes/index.tsx</code> to get started.
-      </p>
-    </div>
-  )
+    <main>
+      <Box as="header" p="30" bd bdrs="20">
+        <Center>
+          <Heading level="1" fz="3xl" fw="700">
+            My Home Item Manager
+          </Heading>
+        </Center>
+      </Box>
+    </main>
+  );
 }

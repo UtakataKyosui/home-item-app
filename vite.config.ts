@@ -4,7 +4,6 @@ import { devtools } from "@tanstack/devtools-vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 
 import viteReact from "@vitejs/plugin-react";
-import tailwindcss from "@tailwindcss/vite";
 import { cloudflare } from "@cloudflare/vite-plugin";
 
 const config = defineConfig({
@@ -21,7 +20,6 @@ const config = defineConfig({
   plugins: lazyPlugins(() => [
     devtools(),
     cloudflare({ viteEnvironment: { name: "ssr" } }),
-    tailwindcss(),
     tanstackStart(),
     viteReact(),
   ]),
